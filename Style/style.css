@@ -1,4 +1,4 @@
-/* HTML CSS */
+/* HTML */
 html {
     font-family: 'Roboto', sans-serif;
     height: 100%;
@@ -10,394 +10,526 @@ html {
     padding: 0;
 }
 
+/* Body*/
 body {
     background-color: white;
     margin: 0;
     min-height: 100%;
 }
 
-/* Header CSS */
-/*** Nav Bar***/
+/* Page Content section*/
+#page-content {
+    display: grid;
+}
 
-#nav-bar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+/* Index Grid Areas*/
+/**Mobile**/
+@media (min-width:320px) {
+    #page-content {
+        grid-template-areas:
+            "NavBar"
+            "FrontPage"
+            "Footer";
+        grid-template-rows: 1.5fr 3.5fr 2fr;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+/**Tablet or Laptop**/
+@media screen and (min-width:768px) {
+    #page-content {
+        grid-template-areas:
+            "NavBar"
+            "FrontPage"
+            "Footer"
+        ;
+        grid-template-rows: 60px 4fr 2fr;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+/*Grid areas for #page-content section*/
+#nav-bar {
+    display: grid;
+    size: 100%;
+    grid-area: NavBar;
+}
+
+#front-page {
+    display: grid;
+    grid-area: FrontPage;
+}
+
+/* Header */
+/**Nav-bar**/
+#menu-1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-gap: 5px;
+    justify-content: center;
+    size: 12fr;
+}
+
+#menu-1 a {
+    color: darkslategrey;
     text-decoration: none;
-    font-size: 17px;
-  }
+}
 
-  /* Change the color of links on hover */
-  #nav-bar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add an active class to highlight the current page */
-  #nav-bar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  #nav-bar .icon {
-    display: none;
-  }
+#menu-1 .text:hover {
+    text-decoration: underline;
+}
 
-  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-    #nav-bar a:not(:first-child) {display: none;}
-    #nav-bar a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
-    #nav-bar.responsive {position: relative;}
-    #nav-bar.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    #nav-bar.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-
-  
 header {
     background-color: white;
     position: fixed;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     align-items: center;
     flex-direction: column;
 }
-
-
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 header nav ul li {
-    padding: 30px;
-    justify-content: space-between;
+    padding: 10px;
     align-items: center;
 }
 
-header nav a {
-    text-decoration: none;
-    color: 14213d;
-    justify-content: space-between;
-    align-items: center;
 
+/*Grid areas for Nav bar*/
+li .logo-nav-bar {
+    grid-area: "logo-header";
 }
 
-header .logo {
-    width: 70px;
-    justify-content: space-between;
-    align-items: center;
+li .nav-bar-1 {
+    grid-area: "1";
 }
 
-a {
-    color: darkslategrey;
+li .nav-bar-2 {
+    grid-area: "2";
 }
 
-
-/* Footer CSS */
-
-.footer-img {
-    display: flex;
-    align-content: flex-end;
+li .nav-bar-3 {
+    grid-area: "3";
 }
 
-.footer-content {
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
+li .nav-bar-4 {
+    grid-area: "4";
 }
 
-footer {
-    padding: 20px;
+li .nav-bar-5 {
+    grid-area: "5";
 }
 
-footer .back-to-top i {
-    margin: auto;
+li .nav-bar-6 {
+    grid-area: "6";
 }
 
-footer .back-to-top {
-    text-align: right;
-    color: lightskyblue;
+li .nav-bar-7 {
+    grid-area: "7";
 }
 
-.fa {
-    display: inline-block;
-    font: normal normal normal 25px/1 FontAwesome;
-    height: 30px;
-    width: 30px;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+/**Nav bar Mobile**/
+
+@media (min-width:320px) {
+
+    #menu-1 {
+        grid-template-areas:
+            "logo-header 1 2 3"
+            "4 5 6 7";
+        grid-template-rows: repeat(2, 50px);
+        grid-template-columns: repeat(4, 3fr);
+        justify-items: center;
+        align-items: center;
+        font-size: 0.8em;
+        text-align: center;
+
+    }
+
+    #menu-1 .text:hover {
+        text-decoration: underline;
+        font-weight: 450;
+    }
+
+    header .logo {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-footer .social {
-    text-align: right;
-    color: lightskyblue;
-}
+/**Nav bar Tablet + Laptop**/
+@media screen and (min-width:768px) {
 
-footer .social i {
-    margin: auto;
-    height: 30px;
-    width: 30px;
-}
+    #menu-1 {
+        grid-template-areas:
+            "logo-header 1 2 3 4 5 6 7";
+        grid-template-rows: 70px;
+        grid-template-columns: repeat(8, 1.5fr);
+        justify-items: center;
+        align-items: center;
+        font-size: 1.2em;
+        text-align: center;
+    }
 
-footer .copyright {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 14px;
-}
+    #menu-1 .text:hover {
+        text-decoration: underline;
+    }
 
-.row {
-    color: darkslategrey;
-}
+    header .logo {
+        width: 70px;
+        height: 70px;
 
-
-/* Front Page CSS */
-
-.front-page-image {
-    height: 500px;
-    width: 900px;
-    justify-content: center;
-
-}
-
-.text-frontpage {
-    background-color: caf0f8;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 400;
-    color: darkslategrey;
-}
-
-#front-page {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#front-page-services {
-    height: 110vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: darkslategrey;
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-}
-
-.data-analysis {
-    margin-bottom: 10px;
-}
-
-.container-frontpage {
-    position: relative;
-    display: flex;
-    text-align: center;
-}
-
-.text-frontpage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-p {
-    padding-left: 100px;
-    padding-right: 100px;
-    font-size: 15px;
-    grid-area: title-about-me;
-
-
-}
-
-h3 {
-    padding-left: 100px;
-    padding-right: 100px;
-    color: darkslategrey;
-
-}
-
-div .chart-examples {
-    padding-left: 100px;
-    padding-right: 100px;
-    size: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.chart-images {
-    height: 125px;
-    width: 180px;
-}
-
-.website-example {
-    margin-left: 100px;
-}
-
-.web-development {
-    margin-top: 30px;
-    margin-bottom: 10px;
-
-}
-
-#front-page-about-me {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-/*    height: 90vh;*/
-    display: flex;
- /*   align-items: center;
-    justify-content: space-around;
-    flex-direction: row;*/
-    
-}
-
-h2{
-    text-align: center;
-    color: darkslategrey;
-    display: grid;
-    align-items: center;
-    justify-content: space-around;
-    grid-area: title-about-me;
-
-}
-
-.front-page-profile-photo {
-    height: 400px;
-    width: 400px;
-    color: darkslategrey;
-    grid-area: profile-photo;
-
-}
-
-.text-frontpage-about-me
-{
-color: darkslategrey;
-}
-
-.container-about-me {
-    margin-top: 50px;
-    display: grid;
- /*   flex-direction: row;*/
-    align-items: center;
-    justify-content: space-around;
-    grid-template-columns:500px 300px;
-    grid-template-rows:50px 300px;
-    grid-template-areas: 
-    "title-about-me profile-photo"
-    "p-about-me profile-photo"    ;
-}
-
-#portfolio-front-page
-{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.portfolio-container {
-    text-align: center;
-    font-size: 20px;
-    color: darkslategrey;
-
-}
-
-#front-page-blog {
-    height: 110vh;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-around;
-    color: darkslategrey;
-    margin-top: 40px;
-    margin-bottom: 40px;
-
-}
-
-.blog-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    overflow:visible;
+    }
 }
 
 
+/* Index main section */
+/** For Mobile**/
+@media (min-width:320px) {
+    .img-container {
+        height: 375.2px;
+        text-align: inherit;
+    }
 
-#form
-{
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-evenly;
-    color: darkslategrey;
+    .img-container img {
+        height: 375px;
+        width: 320px;
+        justify-content: space-around;
+    }
 
+    .text-frontpage {
+        background-color: caf0f8;
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: 400;
+        color: darkslategrey;
+    }
 
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+    .text-frontpage:hover {
+        font-weight: 500;
+    }
 
-input{
-    font-size: 15px;
-    align-items: center;
-}
-legend {
-    font-size: 21px;
-    text-align: center;
-    margin: 5px;
-}
-label{
-    font-size: 15px;
-    text-align: left;
-    margin: 5px;
-}
-#newsletter-optin {
-    font-size: 15px;
-}
-option{
-    font-size: 15px;
-    margin: 5px;
-}
-select{
-    font-size: 15px;
-    margin: 5px;
-}
+    .front-page-image {
+        height: 250px;
+        width: 250px;
+        justify-content: center;
 
+    }
+
+    /** For Tablet + Laptop**/
+    @media screen and (min-width:768px) {
+        .img-container {
+            height: 750px;
+            width: 750px;
+            justify-content: center;
+        }
+
+        .img-container img {
+            height: 600px;
+            width: 600px;
+            justify-content: space-around;
+        }
+
+        .text-frontpage {
+            background-color: caf0f8;
+            font-size: 40px;
+            text-align: center;
+            font-weight: 350;
+            color: darkslategrey;
+        }
+
+        #front-page {
+            height: 90vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    /*Services Page*/
+    #front-page-services {
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: darkslategrey;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+    }
+
+    .data-analysis {
+        margin-bottom: 10px;
+    }
+
+    .container-frontpage {
+        position: relative;
+        display: flex;
+        text-align: center;
+    }
+
+    .text-frontpage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    p {
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 15px;
+        grid-area: title-about-me;
+    }
+
+    h3 {
+        padding-left: 100px;
+        padding-right: 100px;
+        color: darkslategrey;
+
+    }
+
+    div .chart-examples {
+        padding-left: 100px;
+        padding-right: 100px;
+        size: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .chart-images {
+        height: 125px;
+        width: 180px;
+    }
+
+    .website-example {
+        margin-left: 100px;
+    }
+
+    .web-development {
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+    }
+
+    #front-page-about-me {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+    }
+
+    h2 {
+        text-align: center;
+        color: darkslategrey;
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: title-about-me;
+    }
+
+    .front-page-profile-photo {
+        height: 400px;
+        width: 400px;
+        color: darkslategrey;
+        grid-area: profile-photo;
+    }
+
+    .text-frontpage-about-me {
+        color: darkslategrey;
+    }
+
+    .container-about-me {
+        margin-top: 50px;
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        grid-template-columns: 500px 300px;
+        grid-template-rows: 50px 300px;
+        grid-template-areas:
+            "title-about-me profile-photo"
+            "p-about-me profile-photo";
+    }
+
+    #portfolio-front-page {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .portfolio-container {
+        text-align: center;
+        font-size: 20px;
+        color: darkslategrey;
+
+    }
+
+    #front-page-blog {
+        height: 110vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        color: darkslategrey;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+    }
+
+    /*Blog*/
+    .blog-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        overflow: visible;
+    }
+
+    #form {
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        color: darkslategrey;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    input {
+        font-size: 15px;
+        align-items: center;
+    }
+
+    legend {
+        font-size: 21px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    label {
+        font-size: 15px;
+        text-align: left;
+        margin: 5px;
+    }
+
+    #newsletter-optin {
+        font-size: 15px;
+    }
+
+    option {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    select {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    /*Footer **/
+    footer {
+        padding: 10px;
+    }
+
+    footer .copyright {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /**Footer Mobile**/
+    @media (min-width:320px) {
+        footer .contact {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.75em;
+        }
+        .social .fa-linkedin-square:before {
+            font-size: 15px;
+        }
+
+        .social .fa-envelope-square {
+            font-size: 15px;
+        }
+
+        .back-to-top .fa-arrow-up {
+            font-size: 15px;
+        }
+
+        .fa:hover {
+            color: #48cae4;
+        }
+
+        div .copyright {
+            font-size: 0.5em;
+        }
+
+        .e-mail:hover {
+            font-weight: 500;
+            background-color: #caf0f8;
+        }
+        footer .back-to-top {
+            text-align: center;
+            color: #0096c7;
+        }
+        footer .social {
+            text-align: center;
+            color: #0096c7;
+        }
+    }
+
+    /**Footer Tablet + Laptop**/
+    @media screen and (min-width:768px) {
+        footer .contact {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .social .fa-linkedin-square:before {
+            font-size: 30px;
+        }
+
+        .social .fa-envelope-square {
+            font-size: 30px;
+        }
+
+        .back-to-top .fa-arrow-up {
+            font-size: 25px;
+        }
+
+        .fa:hover {
+            color: #48cae4;
+        }
+
+        div .copyright {
+            font-size: 0.7em;
+        }
+
+        .e-mail:hover {
+            font-weight: 500;
+            background-color: #caf0f8;
+        }
+        footer .back-to-top {
+            text-align: right;
+            color: lightskyblue;
+        }
+        footer .social {
+            text-align: right;
+            color: lightskyblue;
+        }
+    }
