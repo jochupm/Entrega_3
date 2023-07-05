@@ -1,0 +1,93 @@
+/* Index Grid Areas*/
+/**Mobile**/
+@media (min-width:320px) {
+    .page-content {
+        grid-template-areas:
+            "NavBar"
+            "FrontPage"
+            "Footer";
+        grid-template-rows: 1.5fr 3.5fr 2fr;
+        font-size: 1em;
+        text-align: center;
+        @include page-height;
+    }
+}
+
+/**Tablet or Laptop**/
+@media screen and (min-width:768px) {
+    .page-content {
+        grid-template-areas:
+            "NavBar"
+            "FrontPage"
+            "Footer"
+        ;
+        grid-template-rows: 60px 4fr 2fr;
+        font-size: 1em;
+        text-align: center;
+        @include page-height;
+    }
+}
+
+/* Index main section */
+/** For Mobile**/
+@media (min-width:320px) {
+    .img-container {
+        height: 375.2px;
+        text-align: inherit;
+
+        img {
+            height: 375px;
+            width: 320px;
+            justify-content: space-around;
+        }
+    }
+
+    .text-frontpage {
+        background-color: caf0f8;
+        font-size: 1.3em;
+        text-align: center;
+        font-weight: 400;
+        color: $text-color;
+
+        &:hover {
+            font-weight: 500;
+        }
+    }
+
+    .front-page-image {
+        height: 250px;
+        width: 250px;
+        justify-content: center;
+
+    }
+}
+
+/** For Tablet + Laptop**/
+@media screen and (min-width:768px) {
+    .img-container {
+        height: 750px;
+        width: 750px;
+        justify-content: center;
+
+        & img {
+            height: 600px;
+            width: 600px;
+            justify-content: space-around;
+        }
+    }
+
+    .text-frontpage {
+        background-color: caf0f8;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 350;
+        color: darkslategrey;
+    }
+
+    .front-page {
+        height: 90vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

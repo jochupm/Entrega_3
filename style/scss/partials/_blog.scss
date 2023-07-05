@@ -1,0 +1,229 @@
+/** Blog**/
+/** cards**/
+.card1 {
+    grid-area: card1;
+    justify-self: center;
+}
+
+.card2 {
+    grid-area: card2;
+    justify-self: center;
+
+}
+
+.card3 {
+    grid-area: card3;
+    justify-self: center;
+
+}
+
+.card4 {
+    grid-area: card4;
+    justify-self: center;
+
+}
+
+.card5 {
+    grid-area: card5;
+    justify-self: center;
+
+}
+
+.card6 {
+    grid-area: card6;
+    justify-self: center;
+
+}
+
+.front-page-blog {
+    display: grid;
+    grid-area: front-page-blog;
+}
+
+.blog-content h1 {
+    text-align: center;
+    color: $text-color;
+    margin: 10px;
+}
+
+/**Blog Mobile or Tablet**/
+@media (min-width:320px) {
+
+    .blog-content {
+        display: grid;
+        grid-template-areas:
+            "NavBar"
+            "front-page-blog"
+            "Footer"
+        ;
+        grid-template-columns: 12fr;
+        grid-template-rows: 0.75fr 2.75fr 1.1fr;
+        @include page-height; 
+        }
+
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .cards {
+        display: grid;
+        grid-template-areas: "card1 card2"
+            "card3 card4"
+            "card5 card6";
+        grid-template-columns: repeat(2, 4fr);
+        grid-template-rows: repeat(3, 4fr);
+        margin-top: 30px;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+
+
+    .flip-card {
+        background-color: transparent;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #f1f1f1;
+        perspective: 100px;
+
+        &-inner {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        &:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        &-front,
+        &-back {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+            justify-self: center;
+
+        }
+
+        &-front {
+            background-color: #bbb;
+            color: $text-color;
+        }
+
+        /* Style the back side */
+        &-back {
+            background-color: lightskyblue;
+            color: white;
+            transform: rotateY(180deg);
+            justify-self: center;
+
+
+            & h1 {
+                font-size: 0.75em;
+            
+
+            &:hover {
+                color: $hover-mobile;
+                @include hover-text-decoration;
+            }
+        }
+        }
+
+        &-back p {
+            font-size: 0.6em;
+            text-align: justify;
+        }
+
+        &-front img {
+            height: 80px;
+            width: 80px;
+        }
+    }
+}
+
+/**Blog desktop**/
+@media screen and (min-width:768px) {
+
+    .blog-content {
+        display: grid;
+        grid-template-areas:
+            "NavBar"
+            "front-page-blog"
+            "Footer"
+        ;
+        grid-template-columns: 12fr;
+        grid-template-rows: 105px 450px 200px;
+        @include page-height;  
+    }
+  
+    .cards {
+        display: grid;
+        grid-template-areas: "card1 card2 card3"
+            " card4 card5 card6";
+        grid-template-columns: repeat(3, 4fr);
+        grid-template-rows: repeat(2, 4fr);
+        margin-top: 10px;
+        column-gap: 25px;
+        row-gap: 25px;
+        align-items: center;
+        justify-content: center;
+        justify-self: stretch
+    }
+  
+    .flip-card {
+        background-color: transparent;
+        width: 180px;
+        height: 180px;
+        perspective: 180px;
+        align-items: center;
+        align-content: center;
+
+        &-inner {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        &:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+&-front {
+    background-color: #bbb;
+    color: $text-color;
+}
+&-back {
+    background-color: lightskyblue;
+    color: white;
+    transform: rotateY(180deg);
+    & p {
+        font-size: 0.9em;
+        text-align: justify;
+    }
+    & h1 {
+        font-size: 1.1em;
+    
+    &:hover {
+        color: $hover-desktop;
+@include hover-text-decoration;
+}
+    }
+}
+&-front img {
+    height: 180px;
+    width: 180px;
+}
+    }
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+    }
+}

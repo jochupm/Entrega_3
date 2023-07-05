@@ -1,0 +1,181 @@
+
+
+/*Services Page*/
+/**Table or Phone**/
+@media (min-width:320px) {
+
+    .front-page-services {
+        display: grid;
+        grid-template-areas:
+            "NavBar"
+            "data-analysis"
+            "web-development"
+            "Footer";
+        grid-template-rows: 120px 250px 250px 150px;
+        @include page-height;
+
+        & p {
+            font-size: 0.5em;
+            text-align: justify;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & h1 {
+            font-size: 0.9em;
+            text-align: center;
+            color: $text-color;
+        }
+
+        & h3 {
+            font-size: 0.70em;
+            text-align: justify;
+        }
+    }
+
+    div .chart-examples {
+        padding-left: 25px;
+        padding-right: 25px;
+        size: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+        column-gap: 10px;
+        row-gap: 15px;
+        justify-items: center;
+        align-items: stretch;
+    }
+
+    .data-analysis {
+        margin: 10px;
+
+        &__class {
+            margin-bottom: 10px;
+        }
+    }
+
+    .web-development {
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        &__class {
+            margin-top: 10px;
+        }
+    }
+
+    .chart-images {
+        height: 60px;
+        width: 90px;
+    }
+
+    .website-example {
+        margin-left: 30px;
+        font-size: 0.75em;
+
+        & .text:hover {
+            color: $hover-mobile;
+        }
+    }
+
+}
+
+/** Desktop o Laptop**/
+@media screen and (min-width:768px) {
+
+    .front-page-services {
+        display: grid;
+        grid-template-areas:
+            "NavBar"
+            "data-analysis"
+            "web-development"
+            "Footer";
+        grid-template-rows: 80px 3fr 3fr 2fr;
+        @include page-height; 
+
+        & p {
+            font-size: 1em;
+            text-align: justify;
+            padding-left: 80px;
+            padding-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        & h1 {
+            font-size: 1.5em;
+            text-align: center;
+            color: $text-color;
+        }
+
+        & h3 {
+            font-size: 1.5em;
+            text-align: justify;
+        }
+    }
+
+    div .chart-examples {
+        padding-left: 80px;
+        padding-right: 80px;
+        size: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .data-analysis__class {
+        margin-bottom: 20px;
+    }
+
+    .web-development {
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        &__class {
+            margin-top: 20px;
+        }
+
+        .chart-images {
+            height: 125px;
+            width: 180px;
+        }
+
+        .website-example {
+            margin-left: 100px;
+        }
+    }
+}
+
+.data-analysis {
+    margin-bottom: 10px;
+}
+
+.container-frontpage {
+    position: relative;
+    display: flex;
+    text-align: center;
+}
+
+.text-frontpage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-about-me__text p {
+
+        grid-area: title-about-me;
+    }
+}
+
+h3 {
+    padding-left: 100px;
+    padding-right: 100px;
+    color: $text-color;
+}

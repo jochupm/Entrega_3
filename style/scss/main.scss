@@ -1,0 +1,81 @@
+/* HTML */
+html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Universal Selector CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body*/
+body {
+    background-color: white;
+    margin: 0;
+    min-height: 100%;
+}
+
+/* Page Content section*/
+.page-content {
+    display: grid;
+}
+
+/**Variables**/
+$text-color: #2F4F4F;
+$hover-mobile: #5a189a;
+$hover-desktop: #002137;
+
+/**MIXIN**/
+@mixin page-height{
+    height: 110vh;
+ }
+
+ @mixin hover-text-decoration{
+text-decoration: underline; 
+}
+ 
+
+/*Grid areas for #page-content section*/
+.nav-bar {
+    display: grid;
+    size: 100%;
+    grid-area: NavBar;
+}
+
+.front-page {
+    display: grid;
+    grid-area: FrontPage;
+}
+
+/*Grid areas for Services section*/
+#data-analysis {
+    display: grid;
+    grid-area: data-analysis;
+
+}
+
+#web-development {
+    display: grid;
+    grid-area: web-development;
+}
+
+@import "../scss/partials/nav-bar";
+
+@import "../scss/partials/nav-bar";
+
+@import "../scss/partials/index";
+
+@import "../scss/partials/services";
+
+@import "../scss/partials/footer";
+
+@import "../scss/partials/blog";
+
+@import "../scss/partials/about\ me";
+
+@import "../scss/partials/contact";
+
+@import "../scss/partials/portfolio";

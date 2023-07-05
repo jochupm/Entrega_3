@@ -1,0 +1,122 @@
+/* Header */
+/**Nav-bar**/
+.menu-1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-gap: 5px;
+    justify-content: center;
+    size: 12fr;
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    .text:hover {
+      @include hover-text-decoration;
+    }
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+
+    nav ul li {
+        padding: 10px;
+        align-items: center;
+    }
+}
+
+/*Grid areas for Nav bar*/
+li .logo-nav-bar {
+    grid-area: logo-header;
+  }
+  
+  li .nav-bar-1 {
+    grid-area: 1;
+  }
+  
+  li .nav-bar-2 {
+    grid-area: 2;
+  }
+  
+  li .nav-bar-3 {
+    grid-area: 3;
+  }
+  
+  li .nav-bar-4 {
+    grid-area: 4;
+  }
+  
+  li .nav-bar-5 {
+    grid-area: 5;
+  }
+  
+  li .nav-bar-6 {
+    grid-area: 6;
+  }
+  
+  li .nav-bar-7 {
+    grid-area: 7;
+  }
+
+/**Nav bar Mobile**/
+
+@media (min-width:320px) {
+
+    .menu-1 {
+        grid-template-areas:
+            "logo-header 1 2 3"
+            "4 5 6 7";
+        grid-template-rows: repeat(2, 50px);
+        grid-template-columns: repeat(4, 3fr);
+        justify-items: center;
+        align-items: center;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .menu-1 .text:hover {
+      @include hover-text-decoration;
+      font-weight: 450;
+        color: $hover-mobile;
+    }
+
+    header .logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/**Nav bar Tablet + Laptop**/
+@media screen and (min-width:768px) {
+
+    .menu-1 {
+        grid-template-areas:
+            "logo-header 1 2 3 4 5 6 7";
+        grid-template-rows: 70px;
+        grid-template-columns: repeat(8, 1.5fr);
+        justify-items: center;
+        align-items: center;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .menu-1 .text:hover {
+      @include hover-text-decoration;
+      color: $hover-desktop;
+    }
+
+    header .logo {
+        width: 70px;
+        height: 70px;
+
+    }
+}

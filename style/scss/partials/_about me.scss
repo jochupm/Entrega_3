@@ -1,0 +1,128 @@
+/** About Me **/
+
+.front-page-profile-photo {
+    grid-area: profile-photo;
+    display: grid;
+  }
+  
+  .text-frontpage-about-me {
+    grid-area: text-about-me;
+
+    &__text {
+        grid-area:about-me__text ;
+    }
+.container-about-me {
+  grid-area: container-about-me;
+  display: grid;
+}
+.about-me-content {
+  display: grid;
+}
+}
+.container-about-me {
+    grid-area: container-about-me;
+    display: grid;
+  }
+  .about-me-content {
+    display: grid;
+  }
+
+  /**About Me Mobile or Tablet**/
+  @media (min-width:320px) {
+    .about-me-content{
+    grid-template-areas: 
+    "NavBar"
+    "container-about-me"
+    "Footer"
+    ;
+    grid-template-columns: 12fr;
+    grid-template-rows: 0.6fr 4fr 1.1fr;
+  }
+  
+  
+    .front-page-profile-photo {
+        height: 200px;
+        width: 200px;
+        color: $text-color;
+  justify-self: center;  
+  margin-top: 20px;
+  }
+  
+  
+    .container-about-me {
+        margin-top: 10px;
+        justify-content: space-around;
+        grid-template-areas: 
+        "text-about-me"
+        "about-me__text"
+        "profile-photo"
+        ;
+        grid-template-columns: 80%;
+        grid-template-rows: 10px, 100px, 100px;
+        & p {
+            font-size: 0.7em;
+            width: 100%;
+            color: $text-color;
+            text-align: justify;
+        }
+        & h2 {
+            font-size: 0.9em;
+            color: $text-color;
+            text-align: center;
+        &:hover{
+            color: $hover-mobile;
+            text-decoration: underline;
+        }
+        }
+
+    }
+
+  }
+
+  /**About me Desktop**/
+  @media screen and (min-width:768px) {
+    .about-me-content{
+    grid-template-areas: 
+    "NavBar"
+    "container-about-me"
+    "Footer"
+    ;
+    grid-template-columns: 12fr;
+    grid-template-rows: 105px 450px 190px;
+  }
+  
+    .front-page-profile-photo {
+        height: 300px;
+        width: 300px;
+        align-items: flex-end;
+    }
+  
+    .container-about-me {
+      margin-top: 10px;
+        justify-content: space-around;
+        grid-template-areas: 
+        "text-about-me profile-photo"
+        "about-me__text profile-photo"
+        ;
+        grid-template-columns: 70% 20%;
+        grid-template-rows: 10% 90%;
+        
+        & p {
+            font-size: 1em;
+            width: 100%;
+            color: $text-color;
+            text-align: justify;
+            justify-content: center;
+            margin-left: 5px;
+        }
+        & h2 {
+            font-size: 1.25em;
+            color: darkslategrey;
+            text-align: center;
+            &:hover {
+                text-decoration: underline;
+                color: $hover-desktop;
+            }
+        }
+    }
+}

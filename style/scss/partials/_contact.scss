@@ -1,0 +1,97 @@
+/** CONTACT PAGE **/
+
+.contact-page {
+    display: grid;
+  }
+  .form {
+    grid-template-areas: contact-form;
+    display: grid;
+    padding: 25px;
+  
+  }
+
+  /** Contact page for phone or tablet **/
+  @media (min-width:320px) {
+    .contact-page{
+        grid-template-areas: 
+        "NavBar"
+        "form"
+        "Footer"
+        ;
+        grid-template-columns: 12fr;
+        grid-template-rows: 0.6fr 3.4fr 1.2fr;
+        @include page-height; 
+  }
+  .send-button {
+  font-size: 1em;
+  &:hover{
+    background-color: #0096c7;
+    color: $hover-mobile;
+    border: white;
+    @include hover-text-decoration;
+  }
+}
+  .form{
+    font-size: 0.8em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  input {
+    font-size: 0.8em;
+    &:required {
+      background-color: lightsteelblue;
+    }
+  }
+  label {
+    font-size: 0.8em;
+  }
+  legend {
+    font-size: 1.1em;
+  }
+  select {
+    font-size: 0.9em;
+  }
+}
+ 
+/** Contact for Desktop**/
+@media screen and (min-width:768px) {
+    .contact-page{
+        grid-template-areas: 
+        "NavBar"
+        "form"
+        "Footer"
+        ;
+    grid-template-columns: 12fr;
+    grid-template-rows: 105px 500px 190px;
+    @include page-height; 
+  }
+  .send-button {
+  font-size: 1.2em;
+  &:hover{
+    background-color: lightskyblue;
+    color: $hover-desktop;
+    border: white;
+    @include hover-text-decoration;
+  }
+}
+.form{
+    font-size: 1.1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  input {
+    font-size: 1.1em;
+    &:required {
+      background-color: lightblue;
+    }
+  }
+  label {
+    font-size: 1.1em;
+  }
+  select {
+    font-size: 1.2em;
+  }
+  legend {
+    font-size: 1.4em;
+  }
+}
