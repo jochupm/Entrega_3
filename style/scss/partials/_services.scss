@@ -11,8 +11,8 @@
             "data-analysis"
             "web-development"
             "Footer";
-        grid-template-rows: 120px 250px 250px 150px;
-        @include page-height;
+        grid-template-rows: 15% 60% 45% 15%;
+        @include page-height; 
 
         & p {
             font-size: 0.5em;
@@ -94,8 +94,8 @@
             "data-analysis"
             "web-development"
             "Footer";
-        grid-template-rows: 80px 3fr 3fr 2fr;
-        @include page-height; 
+            grid-template-rows: 15% 60% 45% 15%;
+            @include page-height; 
 
         & p {
             font-size: 1em;

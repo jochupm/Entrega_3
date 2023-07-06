@@ -343,7 +343,7 @@ li .nav-bar-7 {
   .front-page-services {
     display: grid;
     grid-template-areas: "NavBar" "data-analysis" "web-development" "Footer";
-    grid-template-rows: 120px 250px 250px 150px;
+    grid-template-rows: 15% 60% 45% 15%;
     height: 110vh;
   }
   .front-page-services p {
@@ -408,7 +408,7 @@ li .nav-bar-7 {
   .front-page-services {
     display: grid;
     grid-template-areas: "NavBar" "data-analysis" "web-development" "Footer";
-    grid-template-rows: 80px 3fr 3fr 2fr;
+    grid-template-rows: 15% 60% 45% 15%;
     height: 110vh;
   }
   .front-page-services p {
