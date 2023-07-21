@@ -1,0 +1,159 @@
+
+
+.portfolio-page {
+    display: grid;
+}
+
+.portfolio-front-page {
+    grid-area: portfolio-front-page;
+}
+
+/**PORTFOLIO for phone or tablet**/
+
+@media (min-width:320px) {
+    .portfolio-page {
+        grid-template-areas:
+            "NavBar"
+            "portfolio-front-page"
+            "Footer"
+        ;
+        grid-template-columns: 12fr;
+        grid-template-rows: 0.6fr 4.5fr 1.2fr;
+        @include page-height;
+    }
+
+    .portfolio-front-page {
+        margin-top: 125px;
+
+    }
+
+    h2 {
+        font-size: 1.0em;
+        color: $text-color;
+        margin: 10px;
+
+        &:hover {
+            @include hover-text-decoration;
+            color: $hover-mobile;
+        }
+    }
+
+
+
+    .portfolio-link:hover {
+        color: $hover-mobile;
+    }
+
+    .portfolio-container h1 {
+        font-size: 1.1em;
+        color: $text-color;
+        margin: 10px;
+    }
+
+    .portfolio-container h3 {
+        font-size: 0.85em;
+        color: $text-color;
+        margin: 10px;
+        text-align: justify;
+
+        &:hover {
+            @include hover-text-decoration;
+            color: $hover-mobile;
+        }
+    }
+
+    .portfolio-container p {
+        font-size: 0.7em;
+        color: $text-color;
+        margin: 10px;
+        text-align: justify;
+    }
+
+    .portfolio-front-page p {
+        font-size: 0.7em;
+        color: $text-color;
+        margin: 10px;
+        text-align: justify;
+    }
+
+    .portfolio-front-page h3 {
+        font-size: 0.85em;
+        color: $text-color;
+        margin: 10px;
+        text-align: justify;
+    }
+    .Website-example{
+        width: 300px;
+        height: 145.71px;
+        }
+
+
+
+}
+
+/**PORTFOLIO for desktop**/
+@media screen and (min-width:768px) {
+    .portfolio-page {
+        grid-template-areas:
+            "NavBar"
+            "portfolio-front-page"
+            "Footer"
+        ;
+        grid-template-columns: 12fr;
+        grid-template-rows: 105px 236 00px 190px;
+        @include page-height;
+    }
+
+    .portfolio-front-page {
+        margin-top: 100px;
+    }
+
+    .portfolio-container h2 {
+        font-size: 1.5em;
+        color: $text-color;
+        text-align: justify;
+
+        &:hover {
+            @include hover-text-decoration;
+            color: $hover-desktop;
+        }
+    }
+
+    .portfolio-container h1 {
+        font-size: 1.7em;
+    }
+
+    .portfolio-container h3 {
+        font-size: 1.3em;
+    }
+
+    .portfolio-container p {
+        font-size: 1.2em;
+        color: $text-color;
+        text-align: justify;
+        margin: 20px;
+    }
+    .portfolio-front-page p {
+        font-size:1.2em;
+        color: $text-color;
+        margin: 10px;
+        text-align: justify;
+    }
+    .portfolio-front-page h3 {
+        font-size: 1.3em;
+        color: $text-color;
+        margin: 10px;
+        text-align: justify;
+    }
+
+
+    .portfolio-link:hover {
+        color: $hover-desktop;
+    }
+    
+    .Website-example{
+        width: 800px;
+        height: 388.56px;
+        }
+
+}

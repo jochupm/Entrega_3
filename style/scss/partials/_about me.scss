@@ -37,6 +37,8 @@
     ;
     grid-template-columns: 12fr;
     grid-template-rows: 0.6fr 4fr 1.1fr;
+    height: fit-content;
+
   }
   
   
@@ -58,7 +60,7 @@
         "profile-photo"
         ;
         grid-template-columns: 80%;
-        grid-template-rows: 10px, 100px, 100px;
+        grid-template-rows: 10px, 100px, 80px;
         & p {
             font-size: 0.7em;
             width: 100%;
@@ -77,6 +79,7 @@
 
     }
 
+
   }
 
   /**About me Desktop**/
@@ -88,7 +91,9 @@
     "Footer"
     ;
     grid-template-columns: 12fr;
-    grid-template-rows: 105px 450px 190px;
+    grid-template-rows: 105px 600px 190px;
+    height: fit-content;
+
   }
   
     .front-page-profile-photo {
@@ -109,7 +114,7 @@
         
         & p {
             font-size: 1em;
-            width: 100%;
+            width: 85%;
             color: $text-color;
             text-align: justify;
             justify-content: center;

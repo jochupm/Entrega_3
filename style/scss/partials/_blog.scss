@@ -61,6 +61,18 @@
         @include page-height; 
         }
 
+        .blog-main {
+            margin-top: 100px;
+
+        }
+.blog-title h1
+{
+    color: $text-color;
+    text-align: center;
+    &:hover {
+text-decoration: underline;
+    }
+}
     /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
     .cards {
         display: grid;
@@ -70,6 +82,7 @@
         grid-template-columns: repeat(2, 4fr);
         grid-template-rows: repeat(3, 4fr);
         margin-top: 30px;
+        margin-bottom: 30px;
         column-gap: 25px;
         row-gap: 25px;
     }
@@ -81,6 +94,8 @@
         height: 80px;
         border: 1px solid #f1f1f1;
         perspective: 100px;
+        overflow: hidden;
+
 
         &-inner {
             position: relative;
@@ -179,6 +194,8 @@
         perspective: 180px;
         align-items: center;
         align-content: center;
+        overflow: hidden;
+
 
         &-inner {
             position: relative;

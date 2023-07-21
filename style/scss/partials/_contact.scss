@@ -20,8 +20,7 @@
         ;
         grid-template-columns: 12fr;
         grid-template-rows: 0.6fr 3.4fr 1.2fr;
-        @include page-height; 
-  }
+height: fit-content;  }
   .send-button {
   font-size: 1em;
   &:hover{
@@ -63,8 +62,8 @@
         ;
     grid-template-columns: 12fr;
     grid-template-rows: 105px 500px 190px;
-    @include page-height; 
-  }
+    height: fit-content;
+    }
   .send-button {
   font-size: 1.2em;
   &:hover{

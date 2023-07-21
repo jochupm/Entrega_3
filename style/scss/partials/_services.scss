@@ -2,6 +2,16 @@
 
 /*Services Page*/
 /**Table or Phone**/
+
+p {
+    color: $text-color;
+}
+h1 {
+    color:$text-color;
+}
+h3{
+    color:$text-color;
+}
 @media (min-width:320px) {
 
     .front-page-services {
@@ -11,8 +21,8 @@
             "data-analysis"
             "web-development"
             "Footer";
-        grid-template-rows: 15% 60% 45% 15%;
-        @include page-height; 
+        grid-template-rows: 15% 38% 22% 15%;
+        height: fit-content;
 
         & p {
             font-size: 0.5em;
@@ -26,7 +36,6 @@
         & h1 {
             font-size: 0.9em;
             text-align: center;
-            color: $text-color;
         }
 
         & h3 {
@@ -94,8 +103,8 @@
             "data-analysis"
             "web-development"
             "Footer";
-            grid-template-rows: 15% 60% 45% 15%;
-            @include page-height; 
+            grid-template-rows: 15% 40% 40% 15%;
+            height: fit-content;
 
         & p {
             font-size: 1em;
@@ -116,6 +125,7 @@
             font-size: 1.5em;
             text-align: justify;
         }
+    
     }
 
     div .chart-examples {
@@ -145,13 +155,16 @@
             height: 125px;
             width: 180px;
         }
+ 
+}
+.website-example {
+    margin-left: 80px;
+    font-size: 1.2em;
 
-        .website-example {
-            margin-left: 100px;
-        }
+    & .text:hover {
+        color: $hover-mobile;
     }
 }
-
 .data-analysis {
     margin-bottom: 10px;
 }
@@ -178,4 +191,5 @@ h3 {
     padding-left: 100px;
     padding-right: 100px;
     color: $text-color;
+}
 }

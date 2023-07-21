@@ -1,7 +1,7 @@
 /* Header */
 /**Nav-bar**/
 .menu-1 {
-    list-style: none;
+ list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
@@ -17,6 +17,44 @@
     .text:hover {
       @include hover-text-decoration;
     }
+    .nav-bar-4 {
+      position: relative;
+      color: $text-color;
+      z-index: 100;
+    }
+    .menu-1 li {
+      padding: 0.5rem 1rem;
+      background-color: lightcyan;
+    }
+    .nav-bar-4:hover .dropdown {
+      display: block;
+      opacity: 1;
+      @include hover-text-decoration;
+      font-size: 0.75em;
+      align-content: center;
+      justify-content: flex-end;
+
+}
+    
+    .dropdown {
+      background-color: lightcyan;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      opacity: 0;
+      display: none;
+      background:lightcyan;
+ 
+    }
+    
+   .dropdown li {
+      list-style: none;
+    }
+
+
 }
 
 header {
