@@ -423,8 +423,8 @@ h3 {
   .front-page-services {
     display: grid;
     grid-template-areas: "NavBar" "data-analysis" "web-development" "Footer";
-    grid-template-rows: 15% 50% 30% 15%;
-    height: fit-content;
+    grid-template-rows: 20% 65% 40% 20%;
+    height: 70vh;
   }
   .front-page-services p {
     font-size: 0.5em;
@@ -437,7 +437,7 @@ h3 {
   .front-page-services h1 {
     font-size: 0.9em;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .front-page-services h3 {
     font-size: 0.7em;
@@ -488,8 +488,8 @@ h3 {
   .front-page-services {
     display: grid;
     grid-template-areas: "NavBar" "data-analysis" "web-development" "Footer";
-    grid-template-rows: 15% 40% 40% 15%;
-    height: fit-content;
+    grid-template-rows: 15% 65% 50% 15%;
+    height: 80vh;
   }
   .front-page-services p {
     font-size: 1em;
