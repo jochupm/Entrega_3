@@ -423,7 +423,7 @@ h3 {
   .front-page-services {
     display: grid;
     grid-template-areas: "NavBar" "data-analysis" "web-development" "Footer";
-    grid-template-rows: 15% 38% 22% 15%;
+    grid-template-rows: 15% 50% 30% 15%;
     height: fit-content;
   }
   .front-page-services p {
